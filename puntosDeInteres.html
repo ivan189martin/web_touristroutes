@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Puntos de Interés</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="cabecera">
+        <div class="titulo">Tourist Routes</div>
+        <div class="acciones">
+            <button class="boton" onclick="opciones()">Panel de administración</button>
+            <button class="boton" onclick="cerrarSesion()">Cerrar Sesión</button>
+        </div>
+    </header>
+    <div class="datos-container">
+        <h1>Listado de puntos de interés</h1>
+        <div id="datos-lista"></div>
+    </div>
+
+    <div id="modal-editar-punto" class="modal oculto">
+        <div class="modal-contenido">
+            <h3>Editar Punto de interés</h3>
+
+            <label for="nombre-punto">Nombre: </label>
+            <textarea id="nombre-punto"></textarea>
+
+
+            <label for="descripcion-punto">Descripción: </label>
+            <textarea id="descripcion-punto" rows="4"></textarea>
+
+            <label for="categoria-punto">Categoría: </label>
+            <select id="categoria-punto">
+                <option value="CULTURAL">CULTURAL</option>
+                <option value="GASTRONOMICO">GASTRONOMICO</option>
+                <option value="NATURAL">NATURAL</option>
+                <option value="COMERCIAL">COMERCIAL</option>
+                <option value="ENTRETENIMIENTO">ENTRETENIMIENTO</option>
+                <option value="OTRO">OTRO</option>
+            </select>
+
+            <div>
+                <button id="guardar-cambio">Guardar</button>
+                <button id="cancelar-edicion">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/puntosDeInteres.js"></script>
+    <script src="js/cabecera.js"></script>
+</body>
+
+</html>

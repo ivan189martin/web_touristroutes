@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Rutas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="cabecera">
+        <div class="titulo">Tourist Routes</div>
+        <div class="acciones">
+            <button class="boton" onclick="opciones()">Panel de administración</button>
+            <button class="boton" onclick="cerrarSesion()">Cerrar Sesión</button>
+        </div>
+    </header>
+    <div class="datos-container">
+        <h1>Listado de rutas</h1>
+        <div id="datos-lista"></div>
+    </div>
+
+    <div id="modal-editar-ruta" class="modal oculto">
+        <div class="modal-contenido">
+            <h3>Editar Ruta</h3>
+
+            <label for="nombre-ruta">Nombre: </label>
+            <textarea id="nombre-ruta"></textarea>
+
+
+            <label for="descripcion-ruta">Descripción: </label>
+            <textarea id="descripcion-ruta" rows="4"></textarea>
+
+            <div>
+                <button id="guardar-cambio">Guardar</button>
+                <button id="cancelar-edicion">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/rutas.js"></script>
+    <script src="js/cabecera.js"></script>
+</body>
+
+</html>

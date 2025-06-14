@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Usuarios</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="cabecera">
+        <div class="titulo">Tourist Routes</div>
+        <div>
+            <button class="boton" onclick="opciones()">Panel de administración</button>
+            <button class="boton" onclick="cerrarSesion()">Cerrar Sesión</button>
+        </div>
+    </header>
+    <div class="datos-container">
+        <h1>Listado de usuarios</h1>
+        <div id="datos-lista"></div>
+    </div>
+
+    <div id="modal-editar-rol" class="modal oculto">
+        <div class="modal-contenido">
+            <h3>Editar Rol del Usuario</h3>
+            <label for="rol-punto">Rol: </label>
+            <select id="rol-punto">
+                <option value="USER">USER</option>
+                <option value="ADMIN">ADMIN</option>
+            </select>
+            <div>
+                <button id="guardar-cambio">Guardar</button>
+                <button id="cancelar-edicion">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/usuarios.js"></script>
+    <script src="js/cabecera.js"></script>
+</body>
+
+</html>
