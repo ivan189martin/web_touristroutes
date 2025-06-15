@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     try {
-        const response = await fetch(`https://touristroutes.onrender.com/api/touristroutes/comentario/consultarTodosComentarios`, {
+        const response = await fetch(`https://server-touristroutes.onrender.com/touristroutes/comentario/consultarTodosComentarios`, {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}`
@@ -66,7 +66,7 @@ function mostrarComentarios(lista) {
 
                 try {
                     const token = localStorage.getItem('token');
-                    const response = await fetch(`https://touristroutes.onrender.com/api/touristroutes/comentario/eliminarComentarioYValoracion/${idComentario}`, {
+                    const response = await fetch(`https://server-touristroutes.onrender.com/touristroutes/comentario/eliminarComentarioYValoracion/${idComentario}`, {
                         method: 'DELETE',
                         headers: {
                             'Authorization': `Bearer ${token}`
@@ -89,7 +89,7 @@ function mostrarComentarios(lista) {
 
 //Obtener nombre de usuario por ID
 function obtenerNombreUsuario(idUsuario, token) {
-    return fetch(`http://localhost:8080/touristroutes/usuario/consultarUsuarioPorId/${idUsuario}`, {
+    return fetch(`https://server-touristroutes.onrender.com/touristroutes/usuario/consultarUsuarioPorId/${idUsuario}`, {
         headers: { 'Authorization': `Bearer ${token}`}
     })
     .then(response => response.ok ? response.json() : null)
@@ -105,9 +105,9 @@ function obtenerNombreEntidad(idEntidad, tipo, token) {
     let url;
 
     if (tipo === 'PUNTODEINTERES'){
-        url = `http://localhost:8080/touristroutes/puntoDeInteres/consultarPuntoDeInteresPorId/${idEntidad}`;
+        url = `https://server-touristroutes.onrender.com/touristroutes/puntoDeInteres/consultarPuntoDeInteresPorId/${idEntidad}`;
     } else if (tipo === 'RUTA') {
-        url = `http://localhost:8080/touristroutes/ruta/consultarRuta/${idEntidad}`;
+        url = `https://server-touristroutes.onrender.com/touristroutes/ruta/consultarRuta/${idEntidad}`;
     } else {
         return Promise.resolve('Entidad desconocida');
     }

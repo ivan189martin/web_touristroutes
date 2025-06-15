@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     try {
-        const response = await fetch(`https://touristroutes.onrender.com/api/puntoDeInteres/consultarTodosPuntosDeInteres`, {
+        const response = await fetch(`https://server-touristroutes.onrender.com/touristroutes/puntoDeInteres/consultarTodosPuntosDeInteres`, {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}`
@@ -65,7 +65,7 @@ function mostrarPuntosDeInteres(lista) {
 
             try {
                 const token = localStorage.getItem('token');
-                const response = await fetch(`https://touristroutes.onrender.com/api/puntoDeInteres/eliminarPuntoDeInteres/${idPuntoDeInteres}`, {
+                const response = await fetch(`https://server-touristroutes.onrender.com/touristroutes/puntoDeInteres/eliminarPuntoDeInteres/${idPuntoDeInteres}`, {
                     method: 'DELETE',
                     headers: {
                         'Authorization': `Bearer ${token}`
@@ -127,7 +127,7 @@ function inicializarModal() {
         };
 
         try {
-            const response = await fetch(`https://touristroutes.onrender.com/api/puntoDeInteres/actualizarPuntoDeInteres`, {
+            const response = await fetch(`https://server-touristroutes.onrender.com/touristroutes/puntoDeInteres/actualizarPuntoDeInteres`, {
                 method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json',

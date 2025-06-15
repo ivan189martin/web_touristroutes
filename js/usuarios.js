@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     try {
-        const response = await fetch(`https://touristroutes.onrender.com/api/touristroutes/usuario/consultarUsuarios`, {
+        const response = await fetch(`https://server-touristroutes.onrender.com/touristroutes/usuario/consultarUsuarios`, {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}`
@@ -68,7 +68,7 @@ function mostrarUsuarios(lista) {
 
             try {
                 const token = localStorage.getItem('token');
-                const response = await fetch(`https://touristroutes.onrender.com/api/touristroutes/usuario/eliminarUsuario/${idUsuario}`, {
+                const response = await fetch(`https://server-touristroutes.onrender.com/touristroutes/usuario/eliminarUsuario/${idUsuario}`, {
                     method: 'DELETE',
                     headers: {
                         'Authorization': `Bearer ${token}`
@@ -134,7 +134,7 @@ function inicializarModal() {
         };
 
         try {
-            const response = await fetch(`https://touristroutes.onrender.com/api/touristroutes/usuario/actualizarUsuario`, {
+            const response = await fetch(`https://server-touristroutes.onrender.com/touristroutes/usuario/actualizarUsuario`, {
                 method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json',

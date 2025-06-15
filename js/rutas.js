@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     try {
-        const response = await fetch(`https://touristroutes.onrender.com/api/touristroutes/ruta/consultarTodasRutas`, {
+        const response = await fetch(`https://server-touristroutes.onrender.com/touristroutes/ruta/consultarTodasRutas`, {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}`
@@ -64,7 +64,7 @@ function mostrarRutas(lista) {
 
             try {
                 const token = localStorage.getItem('token');
-                const response = await fetch(`https://touristroutes.onrender.com/api/touristroutes/ruta/eliminarRuta/${idRuta}`, {
+                const response = await fetch(`https://server-touristroutes.onrender.com/touristroutes/ruta/eliminarRuta/${idRuta}`, {
                     method: 'DELETE',
                     headers: {
                         'Authorization': `Bearer ${token}`
@@ -122,7 +122,7 @@ function inicializarModal() {
         };
 
         try {
-            const response = await fetch(`https://touristroutes.onrender.com/api/touristroutes/ruta/actualizarRuta`, {
+            const response = await fetch(`https://server-touristroutes.onrender.com/touristroutes/ruta/actualizarRuta`, {
                 method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json',

@@ -6,7 +6,7 @@ document.getElementById('login-form').addEventListener('submit', async function 
     const password = this.password.value
 
     try {
-        const response = await fetch('https://touristroutes.onrender.com/api/touristroutes/usuario/validarUsuario', {
+        const response = await fetch('https://server-touristroutes.onrender.com/touristroutes/usuario/validarUsuario', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
